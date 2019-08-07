@@ -1,0 +1,37 @@
+<ActionBar class="action-bar">
+    <Label class="action-bar-title" text="Browse"></Label>
+</ActionBar>
+<StackLayout class="page">
+ <StackLayout class="page-content">
+    <TabView [(ngModel)]="tabSelectedIndex" class="tabed">
+        <StackLayout *tabItem="{title: 'For Seller'}">      
+            <StackLayout margin="10"  class="form" >
+                <Image class="images" src="~/app/images/logo.png"></Image>
+                <Label class="notes" text="Log In"></Label>
+                <StackLayout class="input-field">
+                    <textField required class="input-email" hint="Email" keyboardType="email"></textField>
+                </StackLayout>
+                <StackLayout class="input-field">
+                    <textField required class="input-email" hint="Password" keyboardType="email" secure="true"></textField>
+                </StackLayout>  
+                <button text="Log in" class="sign-btn" (tap)="login()"></button>    
+                <Label class="notesy" text="Don't have a account? Sign up"></Label> 
+            </StackLayout>    
+        </StackLayout>
+        <StackLayout *tabItem="{title: 'For Buyer'}">               
+                <StackLayout margin="10"  class="form" >
+                    <Image class="images" src="~/app/images/logo.png"></Image>
+                    <Label class="notes" text="Log In"></Label>
+                    <StackLayout class="input-field">
+                        <textField required class="input-email" hint="Email" keyboardType="email"></textField>
+                    </StackLayout>
+                    <StackLayout class="input-field">
+                        <textField required class="input-email" hint="Password" keyboardType="email" secure="true"></textField>
+                    </StackLayout>  
+                    <button text="Log in" class="sign-btn" (tap)="login()"></button>    
+                    <Label class="notesy" text="Don't have a account? Sign up"></Label> 
+                </StackLayout> 
+        </StackLayout>
+    </TabView>
+</StackLayout>
+</StackLayout>

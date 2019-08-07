@@ -1,0 +1,22 @@
+<ActionBar class="action-bar">
+    <Label class="action-bar-title" text="Login"></Label>
+</ActionBar>
+
+    <GridLayout class="page page-bg">
+        <scrollView>
+           <StackLayout margin="10"  class="form" >
+            <Image class="images" src="~/app/images/logo.png"></Image>
+            <Label class="notes" text="Let's take some notes!"></Label>
+            <StackLayout row="2" class="input-field">
+                <textField required class="input-email" hint="Email" keyboardType="email"></textField>
+            </StackLayout>
+            <StackLayout row="1" class="input-field">
+                <textField required class="input-email" hint="Password" keyboardType="email" secure="true"></textField>
+            </StackLayout>  
+            <button text="sign in" class="sign-btn" (tap)="login()"></button>         
+            <Label class="notesy" text="Don't have a account?"></Label>
+            <button text="Register" class="Reg-btn" (tap)="register()"></button>
+            <Label class="notes-acc" text="You can log in with"></Label>    
+            </StackLayout>
+        </scrollView> 
+    </GridLayout>
