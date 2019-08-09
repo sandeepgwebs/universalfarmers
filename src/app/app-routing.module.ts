@@ -1,7 +1,8 @@
 import { NgModule } from "@angular/core";
 import { Routes } from "@angular/router";
-import { NSEmptyOutletComponent } from "nativescript-angular";
+//import { NSEmptyOutletComponent } from "nativescript-angular";
 import { NativeScriptRouterModule } from "nativescript-angular/router";
+import { LoginComponent } from "./login/login.component";
 
 const routes: Routes = [
     {
@@ -12,22 +13,25 @@ const routes: Routes = [
 
     {
         path: "home",
-        component: NSEmptyOutletComponent,
+        //component: NSEmptyOutletComponent,
         loadChildren: "~/app/home/home.module#HomeModule",
         outlet: "homeTab"
     },
     {
         path: "browse",
-        component: NSEmptyOutletComponent,
+        //component: NSEmptyOutletComponent,
         loadChildren: "~/app/browse/browse.module#BrowseModule",
         outlet: "browseTab"
     },
     {
         path: "search",
-        component: NSEmptyOutletComponent,
+        //component: NSEmptyOutletComponent,
         loadChildren: "~/app/search/search.module#SearchModule",
         outlet: "searchTab"
-    }
+    },
+
+    { path: "login", component: LoginComponent},
+
 ];
 
 @NgModule({

@@ -8,25 +8,23 @@
 
 .page-content {
     .page-placeholder {
-        color: $page-icon-color;
+        //color: $page-icon-color;
         font-size: $page-content-placeholder-font-size;
         vertical-align: center;
-        horizontal-align: center;
+        //horizontal-align: center;
     }
 
     .page-icon {
         font-size: 72;
         vertical-align: top;
-        horizontal-align: center;
-        color: $page-icon-color;
+        //horizontal-align: center;
+        //color: $page-icon-color;
         margin-top: 20%;
     }
 }
 
 //Action bar
-ActionBar .action-bar-title {
-    horizontal-align: center;
-}
+ 
 .page{
     background-color: #82c422;
     color:#fff;
@@ -34,8 +32,19 @@ ActionBar .action-bar-title {
 .page-content{
     margin:20;
 }
-.page TabView{
-    background-color: #82c422;
+.page TabView {
+    tab-text-color: #fff;
+    tab-background-color: #82c422;
+    selected-tab-text-color: white;
+    android-selected-tab-highlight-color: orange;
+    tab-border-width:8;
+}
+.form .input-email{
+    border-width :0 0 1 0;
+    padding:8 0;
+    font-size:17;
+    margin: 0;
+    border-color: #fff;
     color:#fff;
 }
 .sign-btn{
@@ -44,10 +53,19 @@ ActionBar .action-bar-title {
     background:#FDB60C;
     border-color:#fff;
     font-weight:bold;
-    font-size:19;
+    font-size:17;
     padding:0;
+    height:40;
+    margin: 25 0 20;
 }
-.form textField{
-    color:#fff;
-    border-color:#fff;
+.notesys{
+    text-align:center;
+    font-size: 18;
+}
+.notesy{
+    transform: translateY(130);
+    text-align:center;
+}
+.images{
+    margin:40 0;
 }
