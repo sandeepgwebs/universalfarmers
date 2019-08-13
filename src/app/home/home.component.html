@@ -1,7 +1,123 @@
-<ActionBar class="action-bar">
-    <Label class="action-bar-title" text="Farmering Tools"></Label>
+<ActionBar class="pageaction-bar">  
+<StackLayout class="input-field"> 
+<DockLayout class="footer">
+    <Label class="footer-act" dock="right" text="@."></Label>
+    <Label class="footer-act" dock="left" text="chandigarh"></Label>
+</DockLayout>
+<textField required class="input-email" hint="Find Any Products" keyboardType="email" style.placeholderColor="#fff"></textField>
+</StackLayout>
 </ActionBar>
-
-<GridLayout class="home-page">
-    
-</GridLayout>
+<ScrollView> 
+    <StackLayout class="gray">
+        <label text="fresh recommendations" class="item-head"></label>
+		<WrapLayout orientation="horizontal" horizontalAlignment="center" class="list-item">
+            <StackLayout class="colm-list"> 
+                <Image class="list-images" src="~/app/images/arjun.png"></Image>
+                <label text="Rs:cv750000" class="item-price"></label>
+                <label text="Mahindra Arjun Novo" class="item-name" textWrap="true"></label>
+                <label text="2017 - 78000km" class="item-name"></label>
+                <label text="Location: punjab" class="item-locat"textWrap="true"></label>
+            </StackLayout>
+            <StackLayout class="colm-list"> 
+                <Image class="list-images" src="~/app/images/harrow.jpg"></Image>
+                <label text="Rs: 50000" class="item-price"></label>
+                <label text="harrow" class="item-name" textWrap="true"></label>
+                <label text="" class="item-name"></label>
+                <label text="Location: chandigarh" class="item-locat" textWrap="true"></label>
+            </StackLayout>
+            <StackLayout class="colm-list"> 
+                <Image class="list-images" src="~/app/images/trolley.jpg"></Image>
+                <label text="Rs: 125000" class="item-price"></label>
+                <label text="Agriculture Land Leveler" class="item-name" textWrap="true"></label>
+                <label text="" class="item-name"></label>
+                <label text="Location: zirkpur" class="item-locat" textWrap="true"></label>
+            </StackLayout>
+            <StackLayout class="colm-list"> 
+                <Image class="list-images" src="~/app/images/rotavator-machine.jpg"></Image>
+                <label text="Rs: 280000" class="item-price"></label>
+                <label text="rutavater" class="item-name" textWrap="true"></label>
+                <label text="" class="item-name"></label>
+                <label text="Location: zirkpur" class="item-locat" textWrap="true"></label>
+            </StackLayout>
+            <StackLayout class="colm-list"> 
+                <Image class="list-images" src="~/app/images/download.jpg"></Image>
+                <label text="Rs: 7,75000" class="item-price"></label>
+                <label text="farmer cambain machai" class="item-name" textWrap="true"></label>
+                <label text="" class="item-name"></label>
+                <label text="Location: zirkpur" class="item-locat" textWrap="true"></label>
+            </StackLayout>
+            <StackLayout class="colm-list"> 
+                <Image class="list-images" src="~/app/images/cul-b.png"></Image>
+                <label text="Rs: 15000" class="item-price"></label>
+                <label text="Cultivator" class="item-name"></label>
+                <label text="" class="item-name"></label>
+                <label text="Location: zirkpur" class="item-locat"></label>
+            </StackLayout>
+            <StackLayout class="colm-list"> 
+                <Image class="list-images" src="~/app/images/mahindra.jpg"></Image>
+                <label text="Rs: 280000" class="item-price"></label>
+                <label text="Mahindra Straw Reaper" class="item-name"></label>
+                <label text="" class="item-name"></label>
+                <label text="Location:Ludhiana " class="item-locat"></label>
+            </StackLayout>
+            <StackLayout class="colm-list"> 
+                <Image class="list-images" src="~/app/images/dasmesh.jpg"></Image>
+                <label text="Rs: 165000" class="item-price"></label>
+                <label text="laser land leverl" class="item-name"></label>
+                <label text="" class="item-name"></label>
+                <label text="Location: zirkpur" class="item-locat"></label>
+            </StackLayout>
+            <StackLayout class="colm-list"> 
+                <Image class="list-images" src="~/app/images/agriculture.jpg"></Image>
+                <label text="Rs: 75000" class="item-price"></label>
+                <label text="Agriculture Land Leveler" class="item-name"></label>
+                <label text="" class="item-name"></label>
+                <label text="Location: zirkpur" class="item-locat"></label>
+            </StackLayout>
+            <StackLayout class="colm-list"> 
+                <Image class="list-images" src="~/app/images/download.jpg"></Image>
+                <label text="Rs: 7,75000" class="item-price"></label>
+                <label text="farmer cambain machai" class="item-name"></label>
+                <label text="" class="item-name"></label>
+                <label text="Location: zirkpur" class="item-locat"></label>
+            </StackLayout>
+            <StackLayout class="colm-list"> 
+                <Image class="list-images" src="~/app/images/rotavator-machine.jpg"></Image>
+                <label text="Rs: 280000" class="item-price"></label>
+                <label text="rutavater" class="item-name"></label>
+                <label text="" class="item-name"></label>
+                <label text="Location: zirkpur" class="item-locat"></label>
+            </StackLayout>
+            <StackLayout class="colm-list"> 
+                <Image class="list-images" src="~/app/images/Sed-41-512.png"></Image>
+                <label text="Rs: 15000"></label>
+            </StackLayout>
+        </WrapLayout>
+        <GridLayout orientation="horizontal" horizontalAlignment="center" columns="auto, auto" rows="*,*,*">
+            <StackLayout  row="0" col="0" backgroundColor="red"> 
+                <Image class="list-images" src="~/app/images/Sed-41-512.png"></Image>
+                <label text="news"></label>
+            </StackLayout>
+            <StackLayout row="0" col="1" backgroundColor="blue"> 
+                <Image class="list-images" src="~/app/images/Sed-41-512.png"></Image>
+                <label text="webs"></label>
+            </StackLayout>
+            <StackLayout row="1" col="0" backgroundColor="pink"> 
+                <Image class="list-images" src="~/app/images/Sed-41-512.png"></Image>
+                <label text="gnet"></label>
+            </StackLayout>
+            <StackLayout row="1" col="1" backgroundColor="green"> 
+                <Image class="list-images" src="~/app/images/Sed-41-512.png"></Image>
+                <label text="gnet"></label>
+            </StackLayout>
+            <StackLayout row="2" col="0" backgroundColor="orange"> 
+                <Image class="list-images" src="~/app/images/Sed-41-512.png"></Image>
+                <label text="gnet"></label>
+            </StackLayout>
+            <StackLayout row="2" col="1" backgroundColor="#ccc"> 
+                <Image class="list-images" src="~/app/images/Sed-41-512.png"></Image>
+                <label text="gnet"></label>
+            </StackLayout>
+        </GridLayout>
+    </StackLayout>
+</ScrollView>

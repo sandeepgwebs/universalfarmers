@@ -112,3 +112,69 @@
 .login-page .user-name{
     margin-top:6;
 }
+.list-images{
+    width:150;
+    height:120;
+    margin-bottom:5;
+    border-radius: 5;
+}
+.gray{
+    color:#ccc;
+    //margin:20 0;
+}
+.colm-list{
+    border-width:1;
+    border-color:#ccc;
+    margin:5; 
+    padding:5;
+    border-radius: 5;
+    text-transform: capitalize;
+}
+.list-item{
+   // margin:20 0;
+}
+.pageaction-bar{
+    background-color:#4CA50D;
+    margin-left:-12;
+    padding-bottom:10;
+    color:#fff;
+}
+.pageaction-bar .footer{   
+    margin:10 0 0 0;
+    padding-right:10;
+    padding-left:7;
+    font-size:18;
+    width:100%;
+}
+.pageaction-bar .input-email{
+    border-width:2;
+    border-color:#fff;
+    margin:10 9 5 5;
+    font-size:15;
+    border-radius: 3;
+    //margin-right:10;
+}
+.item-head{
+    margin:15 15;
+    font-size:18;
+    color:#000;
+    font-weight:bold;
+    text-transform: capitalize;
+}
+.colm-list label{
+    margin:2 0; 
+    text-transform: capitalize;
+}
+.colm-list .item-price{
+    font-weight:bold;
+    color:#000;
+    font-size:16;
+}
+.colm-list .item-name{
+    color:#000;
+}
+.colm-list .item-locat{
+    color:#4CA50D;
+    font-weight:bold;
+    text-transform: capitalize;
+}

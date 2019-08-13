@@ -8,10 +8,10 @@
 				<StackLayout margin="10"  class="form" >   
 					<Label class="notes" text=""></Label>
 					<StackLayout class="input-field">
-						<textField required class="input-email" hint="Email" [(ngModel)]="user.email" keyboardType="email"></textField>
+						<textField required class="input-email" hint="Email" [(ngModel)]="user.email" keyboardType="email" style.placeholderColor="#fff"></textField>
 					</StackLayout>  
 					<StackLayout class="input-field">
-						<textField required class="input-email" hint="Password" [(ngModel)]="user.password" keyboardType="email" secure="true"></textField>
+						<textField required class="input-email" hint="Password" [(ngModel)]="user.password" keyboardType="email" secure="true" style.placeholderColor="#fff"></textField>
 					</StackLayout>  
 					<button text="Log in" class="sign-btn" (tap)="login()"></button>    
 					<Label class="notesys" text="Forgot password?"></Label>    
@@ -23,16 +23,16 @@
 				<StackLayout margin="10"  class="form" >
 						<Label class="notes" text=""></Label>
 						<StackLayout class="input-field">
-							<textField required class="input-email" hint="Username" [(ngModel)]="user.username" keyboardType="email"></textField>
+							<textField required class="input-email" hint="Username" [(ngModel)]="user.username" keyboardType="email" style.placeholderColor="#fff"></textField>
 						</StackLayout>
 						<StackLayout class="input-field">
-							<textField required class="input-email" hint="Email" [(ngModel)]="user.email" keyboardType="email"></textField>
+							<textField required class="input-email" hint="Email" [(ngModel)]="user.email" keyboardType="email" style.placeholderColor="#fff"></textField>
 						</StackLayout>
 						<StackLayout class="input-field">
-							<textField required class="input-email" hint="Password" [(ngModel)]="user.password" keyboardType="email" secure="true"></textField>
+							<textField required class="input-email" hint="Password" [(ngModel)]="user.password" keyboardType="email" secure="true" style.placeholderColor="#fff"></textField>
 						</StackLayout>  
 						<StackLayout class="input-field">
-							<textField required class="input-email" hint="Password" [(ngModel)]="user.cpassword" keyboardType="email" secure="true"></textField>
+							<textField required class="input-email" hint="Confirm Password" [(ngModel)]="user.cpassword" keyboardType="email" secure="true" style.placeholderColor="#fff"></textField>
 						</StackLayout> 
 						<button text="Signup" class="sign-btn" (tap)="signup()"></button>  
 				</StackLayout> 
