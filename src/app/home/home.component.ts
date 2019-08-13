@@ -1,7 +1,9 @@
 import { Component, OnInit } from "@angular/core";
 import { DataService, IDataItem } from "../shared/data.service";
-import { Router } from "@angular/router";
-
+import { RouterExtensions } from "nativescript-angular/router";
+import { EventData } from "tns-core-modules/data/observable";
+import { Button } from "tns-core-modules/ui/button";
+import { Page } from "tns-core-modules/ui/page";
 @Component({
     selector: "Home",
     moduleId: module.id,
@@ -10,7 +12,7 @@ import { Router } from "@angular/router";
 export class HomeComponent implements OnInit {
     items: Array<IDataItem>;
      
-    constructor(private _itemService: DataService,private router:Router) { }
+    constructor(private _itemService: DataService,private routerExtensions: RouterExtensions) { }
 
     ngOnInit(): void {
         this.items = this._itemService.getItems();
@@ -18,6 +20,13 @@ export class HomeComponent implements OnInit {
     
     login(){
         alert('fgjhg');
-        this.router.navigate(["login"]);
+        this.routerExtensions.navigate(["login"]);
+        
+    }
+
+    navigateToLogin(){
+        //const button: Button = <Button>args.object;
+    //const page: Page = button.page;
+    this.routerExtensions.navigate(["login"]);
     }
 }

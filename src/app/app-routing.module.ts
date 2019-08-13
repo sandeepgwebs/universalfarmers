@@ -4,13 +4,14 @@ import { Routes } from "@angular/router";
 import { NativeScriptRouterModule } from "nativescript-angular/router";
 import { LoginComponent } from "./login/login.component";
 
+ 
+
 const routes: Routes = [
     {
         path: "",
         redirectTo: "/(homeTab:home/default//browseTab:browse/default//searchTab:search/default)",
         pathMatch: "full"
     },
-
     {
         path: "home",
         //component: NSEmptyOutletComponent,
@@ -29,9 +30,6 @@ const routes: Routes = [
         loadChildren: "~/app/search/search.module#SearchModule",
         outlet: "searchTab"
     },
-
-    { path: "login", component: LoginComponent},
-
 ];
 
 @NgModule({

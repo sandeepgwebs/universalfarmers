@@ -1,22 +1,29 @@
-<ActionBar class="action-bar">
+<!--ActionBar class="action-bar">
     <Label class="action-bar-title" text="Login"></Label>
-</ActionBar>
-
-    <GridLayout class="page page-bg">
-        <scrollView>
-           <StackLayout margin="10"  class="form" >
-            <Image class="images" src="~/app/images/logo.png"></Image>
-            <Label class="notes" text="Let's take some notes!"></Label>
-            <StackLayout row="2" class="input-field">
-                <textField required class="input-email" hint="Email" keyboardType="email"></textField>
-            </StackLayout>
-            <StackLayout row="1" class="input-field">
-                <textField required class="input-email" hint="Password" keyboardType="email" secure="true"></textField>
-            </StackLayout>  
-            <button text="sign in" class="sign-btn" (tap)="login()"></button>         
-            <Label class="notesy" text="Don't have a account?"></Label>
-            <button text="Register" class="Reg-btn" (tap)="register()"></button>
-            <Label class="notes-acc" text="You can log in with"></Label>    
-            </StackLayout>
-        </scrollView> 
-    </GridLayout>
+</ActionBar-->
+<page> 
+    <StackLayout class="login-page"> 
+        <StackLayout class="login-text">
+            <FlexboxLayout class="user-profile">
+                <Image src="~/app/images/Sed-41-512.png" class="user-img"></Image> 
+                <StackLayout class="user-name">
+                    <label text="Log In" class="login-head"></label> 
+                    <label text="login in to your account" class="login-detail"></label>  
+                </StackLayout>
+            </FlexboxLayout>                
+            <GridLayout class="list-group-item" rows="auto" columns="auto, *">
+                <Image row="0" col="0" src="~/app/images/Sed-41-512.png" class="thumb img-rounded"></Image>                  
+                <StackLayout row="0" col="1" >
+                    <label text="Help & Support" class="login-head"></label> 
+                    <label text="Help center and legal terms" class="login-detail"></label>  
+                </StackLayout>
+                <StackLayout row="0" col="2" >
+                    <label text="" class="login-head"></label> 
+                </StackLayout>
+            </GridLayout>
+        </StackLayout>            
+        <StackLayout class="form">    
+            <Button text="login or register" (tap)="showModal()" class="btn btn-primary Reg-btn"></Button>
+        </StackLayout>             
+    </StackLayout>  
+</page>
