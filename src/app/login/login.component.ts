@@ -3,41 +3,62 @@ import { ModalDialogParams } from 'nativescript-angular/directives/dialogs';
 import { RouterExtensions } from 'nativescript-angular/router';
 import { ActivatedRoute } from '@angular/router';
 import { Page } from 'tns-core-modules/ui/page/page';
-
+import { User } from "../models/user";
+import { HttpClient } from "@angular/common/http";
 @Component({
-  selector: 'ns-login',
-  template: `
-  <StackLayout class="page" background="#4CA50D">
-	<StackLayout class="page-content">
-    <label text="&#xf39e; X" (tap)="close()"></label>
-    
-		<Image class="images" src="~/app/images/logo.png"></Image>
-		<StackLayout class="items">      
-			<StackLayout margin="10"  class="form" >
-				<Label class="notes" text=""></Label>
-				<StackLayout class="input-field">
-					<textField required class="input-email" hint="Email" keyboardType="email" style.placeholderColor="#fff"></textField>
-				</StackLayout>
-				<StackLayout class="input-field">
-					<textField required class="input-email" hint="Password" keyboardType="email" secure="true" style.placeholderColor="#fff"></textField>
-				</StackLayout>  
-				<button text="Log in" class="sign-btn" (tap)="login()"></button>    
-        <Label class="notesys" text="Forgot password?"></Label>    
-			</StackLayout>
-		</StackLayout>       
-  </StackLayout>
-  <Label class="notesy" verticalAlignment="bottom" text="Don't have a account? Sign up"></Label>
-</StackLayout>`
+	selector: 'ns-login',
+	templateUrl: "./login.component.html"
 })
 export class LoginComponent implements OnInit {
-   
+	user: User;
+	APIURL: string = "https://mandisuppliers.com/farmers/api/";
+	isBusy = false;
+	constructor(private params: ModalDialogParams, private page: Page,
+		private router: RouterExtensions, private activeRoute: ActivatedRoute, private http: HttpClient) {
+		this.user = new User();
+		this.user.email = "";
+		this.user.password = "";
+	}
 
-  constructor(private params: ModalDialogParams, private page: Page, private router: RouterExtensions, private activeRoute: ActivatedRoute) {}
-
-  ngOnInit() {
-    //alert('ggf');
-  }
-  close() {
-		this.params.closeCallback('success');
+	async login() {
+		this.isBusy = true;
+		await this.http.post(this.APIURL + "auth/login", {
+			email: this.user.email,
+			password: this.user.password
+		}).subscribe((data) => {
+			alert(JSON.stringify(data));
+			this.isBusy = false;
+			this.close();
+		},
+		(error) => {
+			alert(JSON.stringify(error.error.message));
+			this.isBusy = false;
+		});
+		
+	}
+	async signup() {
+		if(this.user.password == this.user.cpassword) {
+			this.isBusy = true;
+			await this.http.post(this.APIURL + "auth/register", {
+				email: this.user.email, username: this.user.username,
+				password: this.user.password
+			}).subscribe((data) => {
+				alert("success");
+				this.isBusy = false;
+				this.close();
+			},
+			(error) => {
+				this.isBusy = false;
+				alert("failure" + JSON.stringify(error));
+			});
+		}
+		else{
+			alert("Password and confirm Password should be same!");
+		}
+		
+	}
+	ngOnInit() { }
+	close() {
+		this.params.closeCallback("success");
 	}
 }

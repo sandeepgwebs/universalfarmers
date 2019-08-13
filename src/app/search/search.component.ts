@@ -1,5 +1,5 @@
-import { Component, OnInit,ViewContainerRef} from "@angular/core";
-import { ModalDialogService,ModalDialogOptions } from "nativescript-angular/directives/dialogs";
+import { Component, OnInit, ViewContainerRef } from "@angular/core";
+import { ModalDialogService, ModalDialogOptions } from "nativescript-angular/directives/dialogs";
 import { LoginComponent } from "../login/login.component";
 import { Page } from "tns-core-modules/ui/page/page";
 
@@ -10,12 +10,13 @@ import { Page } from "tns-core-modules/ui/page/page";
     templateUrl: "./search.component.html"
 })
 export class SearchComponent implements OnInit {
-  
-    constructor(private modalService: ModalDialogService, private viewContainerRef: ViewContainerRef,private page:Page) {
+
+    constructor(private modalService: ModalDialogService, private viewContainerRef: ViewContainerRef,
+        private page: Page) {
         // Use the constructor to inject services.
     }
 
-    ngOnInit(){
+    ngOnInit() {
         this.page.actionBarHidden = true;
         // Use the "ngOnInit" handler to initialize data for the view.
     }
@@ -25,7 +26,7 @@ export class SearchComponent implements OnInit {
             context: {},
             viewContainerRef: this.viewContainerRef
         };
-    this.modalService.showModal(LoginComponent, options);
+        this.modalService.showModal(LoginComponent, options);
     }
-     
+
 }

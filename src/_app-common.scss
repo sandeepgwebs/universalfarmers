@@ -39,6 +39,13 @@
     margin:28;
     margin-bottom:0; 
 }
+.page TabView {
+    tab-text-color: #fff;
+    tab-background-color: #4CA50D;
+    selected-tab-text-color: white;
+    android-selected-tab-highlight-color: orange;
+    tab-border-width:8;
+}
 .page-content .images{
     margin-top:65;
     width:300;
