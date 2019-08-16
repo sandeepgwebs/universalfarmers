@@ -1,35 +1,33 @@
 import { NgModule } from "@angular/core";
 import { Routes } from "@angular/router";
-//import { NSEmptyOutletComponent } from "nativescript-angular";
+import { NSEmptyOutletComponent } from "nativescript-angular";
 import { NativeScriptRouterModule } from "nativescript-angular/router";
 import { LoginComponent } from "./login/login.component";
-
- 
 
 const routes: Routes = [
     {
         path: "",
-        redirectTo: "/(homeTab:home/default//browseTab:browse/default//searchTab:search/default)",
+        redirectTo: "/(homeTab:home/default//sellTab:sell/default//myaccountTab:myaccount/default)",
         pathMatch: "full"
     },
     {
         path: "home",
-        //component: NSEmptyOutletComponent,
+        component: NSEmptyOutletComponent,
         loadChildren: "~/app/home/home.module#HomeModule",
         outlet: "homeTab"
     },
     {
-        path: "browse",
-        //component: NSEmptyOutletComponent,
-        loadChildren: "~/app/browse/browse.module#BrowseModule",
-        outlet: "browseTab"
+        path: "sell",
+        component: NSEmptyOutletComponent,
+        loadChildren: "~/app/sell/sell.module#SellModule",
+        outlet: "sellTab"
     },
     {
-        path: "search",
-        //component: NSEmptyOutletComponent,
-        loadChildren: "~/app/search/search.module#SearchModule",
-        outlet: "searchTab"
-    },
+        path: "myaccount",
+        component: NSEmptyOutletComponent,
+        loadChildren: "~/app/myaccount/myaccount.module#MyaccountModule",
+        outlet: "myaccountTab"
+    }
 ];
 
 @NgModule({

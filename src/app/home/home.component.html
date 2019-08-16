@@ -1,19 +1,19 @@
 <ActionBar class="pageaction-bar">  
 <StackLayout class="input-field"> 
 <DockLayout class="footer">
-    <Label class="footer-act" dock="right" text="@."></Label>
-    <Label class="footer-act" dock="left" text="chandigarh"></Label>
+    <Label class="footer-act" dock="right" text="@."></Label> 
+    <Label class="footer-act" dock="left" (tap)="currentlocation()" text="{{currentloc}}"></Label>
 </DockLayout>
-<textField required class="input-email" hint="Find Any Products" keyboardType="email" style.placeholderColor="#fff"></textField>
-</StackLayout>
+<textField  class="input-email" hint="Find Any Products"  keyboardType="email" style.placeholderColor="#fff"></textField>
+</StackLayout>   
 </ActionBar>
 <ScrollView> 
     <StackLayout class="gray">
         <label text="fresh recommendations" class="item-head"></label>
-		<WrapLayout orientation="horizontal" horizontalAlignment="center" class="list-item">
+		<WrapLayout orientation="horizontal" horizontalAlignment="center" class="list-item">  
             <StackLayout class="colm-list"> 
                 <Image class="list-images" src="~/app/images/arjun.png"></Image>
-                <label text="Rs:cv750000" class="item-price"></label>
+                <label text="Rs: 750000" class="item-price"></label>
                 <label text="Mahindra Arjun Novo" class="item-name" textWrap="true"></label>
                 <label text="2017 - 78000km" class="item-name"></label>
                 <label text="Location: punjab" class="item-locat"textWrap="true"></label>

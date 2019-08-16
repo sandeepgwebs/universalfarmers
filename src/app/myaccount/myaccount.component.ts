@@ -4,12 +4,12 @@ import { LoginComponent } from "../login/login.component";
 import { Page } from "tns-core-modules/ui/page/page";
 
 @Component({
-    selector: "Search",
+    selector: "Myaccount",
     moduleId: module.id,
     providers: [ModalDialogService],
-    templateUrl: "./search.component.html"
+    templateUrl: "./myaccount.component.html"
 })
-export class SearchComponent implements OnInit {
+export class MyaccountComponent implements OnInit {
 
     constructor(private modalService: ModalDialogService, private viewContainerRef: ViewContainerRef,
         private page: Page) {
