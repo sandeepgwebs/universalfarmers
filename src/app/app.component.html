@@ -5,15 +5,14 @@
         name="homeTab">
     </page-router-outlet>
 
-    <page-router-outlet
+    <page-router-outlet 
         *tabItem="{title: 'Sell', iconSource: getIconSource('browse')}"
-        name="browseTab">
+        name="browseTab" class="sell">
     </page-router-outlet>
 
     <page-router-outlet
-        *tabItem="{title: 'My Account', iconSource: getIconSource('icon')}"
+        *tabItem="{title: 'My Account', iconSource: getIconSource('search')}"
         name="searchTab">
     </page-router-outlet>
     
-
 </TabView>

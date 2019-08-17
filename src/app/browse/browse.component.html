@@ -1,38 +1,37 @@
 <ActionBar class="action-bar">
-    <Label class="action-bar-title" text="Sell"></Label>
+    <Label class="action-bar-title" text="What are you offering"></Label>
 </ActionBar>
-<!--StackLayout class="page">
- <StackLayout class="page-content">
-    <Image class="images" src="~/app/images/logo.png"></Image>
-    <TabView [(ngModel)]="tabSelectedIndex" class="tabed">
-        <StackLayout class="items" *tabItem="{title: 'For Seller'}">      
-            <StackLayout margin="10"  class="form" >
-                <Label class="notes" text=""></Label>
-                <StackLayout class="input-field">
-                    <textField required class="input-email" hint="Email" keyboardType="email"></textField>
-                </StackLayout>
-                <StackLayout class="input-field">
-                    <textField required class="input-email" hint="Password" keyboardType="email" secure="true"></textField>
-                </StackLayout>  
-                <button text="Log in" class="sign-btn" (tap)="login()"></button>    
-                <Label class="notesys" text="Forgot password?"></Label>    
-            </StackLayout>    
-            <Label class="notesy" verticalAlignment="bottom" text="Don't have a account? Sign up"></Label>
-        </StackLayout>
-        <StackLayout *tabItem="{title: 'For Buyer'}">               
-            <StackLayout margin="10"  class="form" >
-                    <Label class="notes" text=""></Label>
-                    <StackLayout class="input-field">
-                        <textField required class="input-email" hint="Email" keyboardType="email"></textField>
-                    </StackLayout>
-                    <StackLayout class="input-field">
-                        <textField required class="input-email" hint="Password" keyboardType="email" secure="true"></textField>
-                    </StackLayout>  
-                    <button text="Login" class="sign-btn" (tap)="login()"></button> 
-                    <label class="notesys" text="Forgot password?"></label>   
-            </StackLayout> 
-            <Label class="notesy" verticalAlignment="bottom" text="Don't have a account? Sign up"></Label> 
-        </StackLayout>
-    </TabView>
-</StackLayout>
-</StackLayout-->
+<WrapLayout orientation="horizontal" horizontalAlignment="center" class="list-items">
+    <StackLayout class="categories">
+        <label text="&#xf722;" class="item-bg fas"></label>
+        <label text="tractor " class=""></label>
+    </StackLayout>
+    <StackLayout class="categories">
+        <label text="t" class="item-bg"></label>
+        <label text="Trolley " class=""></label>
+    </StackLayout>
+    <StackLayout class="categories">
+        <label text="r" class="item-bg"></label>
+        <label text="reaper" class=""></label>
+    </StackLayout>
+    <StackLayout class="categories">
+        <label text="h" class="item-bg"></label>
+        <label text="harrow" class=""></label>
+    </StackLayout>
+    <StackLayout class="categories">
+        <label text="r" class="item-bg"></label>
+        <label text="rutavater" class=""></label>
+    </StackLayout>
+    <StackLayout class="categories">
+        <label text="c" class="item-bg"></label>
+        <label text="cambain" class=""></label>
+    </StackLayout>
+    <StackLayout class="categories">
+        <label text="l" class="item-bg"></label>
+        <label text="laser" class=""></label>
+    </StackLayout>
+    <StackLayout class="categories">
+        <label text="#" class="item-bg"></label>
+        <label text="More" class=""></label>
+    </StackLayout>
+</WrapLayout>
