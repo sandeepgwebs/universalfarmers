@@ -2,14 +2,14 @@ import { NgModule } from "@angular/core";
 import { Routes } from "@angular/router";
 import { NativeScriptRouterModule } from "nativescript-angular/router";
 
-import { SearchComponent } from "./search.component";
+import { SellComponent } from "./sell.component";
 
 const routes: Routes = [
-    { path: "default", component: SearchComponent }
+    { path: "default", component: SellComponent }
 ];
 
 @NgModule({
     imports: [NativeScriptRouterModule.forChild(routes)],
     exports: [NativeScriptRouterModule]
 })
-export class SearchRoutingModule { }
+export class SellRoutingModule { }
