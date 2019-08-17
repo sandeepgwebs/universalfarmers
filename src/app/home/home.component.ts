@@ -33,12 +33,13 @@ export class HomeComponent implements OnInit {
                 console.log(url);
                 this.http.get(url)
                     .subscribe((results) => {
-                            co[9-']=============\nsole.log("address1 " + JSON.stringify(results.Response.View[0].Result[0].Location.Address.Label));
-                            if (results.Response.View[0].Result[0].Location.Address.Label) {
-                                this.currentloc = results.Response.View[0].Result[0].Location.Address.Label;
-                            } else {
-                                //this.currentloc = results.error_message;
-                            }
+                        alert(JSON.stringify(results));
+                            //alert("address1 " + JSON.stringify(results.Response.View[0].Result[0].Location.Address.Label));
+                            // if (results.Response.View[0].Result[0].Location.Address.Label) {
+                            //     this.currentloc = results.Response.View[0].Result[0].Location.Address.Label;
+                            // } else {
+                            //     //this.currentloc = results.error_message;
+                            // }
                     }, 
                     (error) => {
                         console.log("ERROR: ", error);
