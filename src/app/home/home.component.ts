@@ -34,7 +34,7 @@ export class HomeComponent implements OnInit {
                 this.http.get(url)
                     .subscribe((results) => {
                         alert(JSON.stringify(results));
-                            //alert("address1 " + JSON.stringify(results.Response.View[0].Result[0].Location.Address.Label));
+                            alert("address1 " + JSON.stringify(results.Response.View[0].Result[0].Location.Address.Label));
                             // if (results.Response.View[0].Result[0].Location.Address.Label) {
                             //     this.currentloc = results.Response.View[0].Result[0].Location.Address.Label;
                             // } else {

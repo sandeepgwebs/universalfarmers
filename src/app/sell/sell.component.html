@@ -2,36 +2,8 @@
     <Label class="action-bar-title" text="What are you offering"></Label>
 </ActionBar>
 <WrapLayout orientation="horizontal" horizontalAlignment="center" class="list-items">
-    <StackLayout class="categories">
-        <label text="&#xf722;" class="item-bg fas"></label>
-        <label text="tractor " class=""></label>
-    </StackLayout>
-    <StackLayout class="categories">
-        <label text="t" class="item-bg"></label>
-        <label text="Trolley " class=""></label>
-    </StackLayout>
-    <StackLayout class="categories">
-        <label text="r" class="item-bg"></label>
-        <label text="reaper" class=""></label>
-    </StackLayout>
-    <StackLayout class="categories">
-        <label text="h" class="item-bg"></label>
-        <label text="harrow" class=""></label>
-    </StackLayout>
-    <StackLayout class="categories">
-        <label text="r" class="item-bg"></label>
-        <label text="rutavater" class=""></label>
-    </StackLayout>
-    <StackLayout class="categories">
-        <label text="c" class="item-bg"></label>
-        <label text="cambain" class=""></label>
-    </StackLayout>
-    <StackLayout class="categories">
-        <label text="l" class="item-bg"></label>
-        <label text="laser" class=""></label>
-    </StackLayout>
-    <StackLayout class="categories">
-        <label text="#" class="item-bg"></label>
-        <label text="More" class=""></label>
+    <StackLayout class="categories" *ngFor="let item of category">
+        <label text="&#x{{ item.category_icon }}" class="item-bg fas" (tap)="getsubcategory(item.id)"></label>  
+        <label text="{{item.category_name}}" class=""></label>
     </StackLayout>
 </WrapLayout>
