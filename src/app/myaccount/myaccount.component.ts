@@ -29,4 +29,11 @@ export class MyaccountComponent implements OnInit {
         this.modalService.showModal(LoginComponent, options);
     }
 
+    fblogin(){
+        alert('fb login');
+    }
+    gologin(){
+        alert('google login');
+    }
+
 }

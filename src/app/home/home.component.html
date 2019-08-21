@@ -2,7 +2,7 @@
 <StackLayout class="input-field"> 
 <DockLayout class="footer">
     <Label class="fas footer-act" dock="right" text="&#xf0f3;"></Label>
-    <Label class="footer-act fas" dock="left" text="&#xf3c5;  chandigarh"></Label>
+    <Label class="footer-act fas" dock="left" text="&#xf3c5;  {{currentloc}}" (tap)="currentlocation()"></Label>
 </DockLayout>
 <textField required class="input-email fas" hint="&#xf002;  Find Any Products" keyboardType="email" style.placeholderColor="#fff"></textField>
 </StackLayout>

@@ -1,9 +1,81 @@
 <ActionBar class="action-bar">
     <Label class="action-bar-title" text="What are you offering"></Label>
 </ActionBar>
-<WrapLayout orientation="horizontal" horizontalAlignment="center" class="list-items">
-    <StackLayout class="categories" *ngFor="let item of category">
-        <label text="&#x{{ item.category_icon }}" class="item-bg fas" (tap)="getsubcategory(item.id)"></label>  
-        <label text="{{item.category_name}}" class=""></label>
+
+
+<!--WrapLayout orientation="horizontal" horizontalAlignment="center" class="list-items">
+
+    <WrapLayout orientation="horizontal" horizontalAlignment="center" class="list-items">
+        <StackLayout class="categories" *ngFor="let item of category">
+            <label text="&#xf722;" class="item-bg fas" (tap)="getsubcategory(item.id)"></label>  
+            <label text="{{item.category_name}}" class=""></label>
+        </StackLayout>
+    </WrapLayout>
+
+    <StackLayout class="categories">
+        <Button text="navigate('sellitem')" (tap)="navigateToFeatured()"></Button>
+        <label text="tractor " class=""></label>
     </StackLayout>
-</WrapLayout>
+    <StackLayout class="categories">
+        <label text="t" class="item-bg" (tap)="goSettings()"></label>
+        <label text="Trolley" class=""></label>
+    </StackLayout>
+    <StackLayout class="categories">
+        <label text="r" class="item-bg" (tap)="login()"></label>
+        <label text="reaper" class=""></label>
+    </StackLayout>
+    <StackLayout class="categories">
+        <label text="h" class="item-bg"></label>
+        <label text="harrow" class=""></label>
+    </StackLayout>
+    <StackLayout class="categories">
+        <label text="r" class="item-bg"></label>
+        <label text="rutavater" class=""></label>
+    </StackLayout>
+    <StackLayout class="categories">
+        <label text="c" class="item-bg"></label>
+        <label text="cambain gh" class=""></label>
+    </StackLayout>
+    <StackLayout class="categories">
+        <label text="l" class="item-bg"></label>
+        <label text="laser" class=""></label>
+    </StackLayout>
+    <StackLayout class="categories">
+        <label text="#" class="item-bg"></label>
+        <label text="More" class=""></label>
+    </StackLayout>
+</WrapLayout-->
+
+<StackLayout class="sell-page">   
+        <StackLayout class="sell-content">    
+            <Label class="notes" text=""></Label>
+            <StackLayout class="input-sell">
+                <Label text="Add title*" class="label"></Label>
+                <textField required class="input-email" hint="" style.placeholderColor="#000"></textField>    
+            </StackLayout>
+            <StackLayout class="input-sell">
+                <Label text="Describe what you are selling*" class="label"></Label>
+                <textField required class="input-email" hint="" style.placeholderColor="#000"></textField>
+            </StackLayout>
+            <StackLayout class="input-sell">
+                <Label text="Price*" class="label"></Label>
+                <textField required class="input-email" hint="" style.placeholderColor="#000"></textField>
+            </StackLayout>
+            <StackLayout class="input-sell">
+                <Label text="Select Location*" class="label"></Label>
+                <textField required class="input-email" hint="" style.placeholderColor="#000"></textField>
+            </StackLayout>
+            <StackLayout class="input-sell">
+                <Label text="Upload images*" class="label"></Label>
+                <Label text="&#xf030;" class="label-cam fas pull-left font-weight-bold" (tap)="option()"></Label> 
+            </StackLayout> 
+            <ScrollView orientation="horizontal"> 
+                <StackLayout orientation="horizontal" >
+                    <Image src="~/app/images/arjantractor.jpg" width="50" class="img-roundeds"></Image>
+                    <Image src="~/app/images/harrow.jpg" width="50" class="img-roundeds"></Image>
+                    <Image [src]="imageTaken" width="50" class="img-roundeds"></Image>
+                </StackLayout>
+            </ScrollView> 
+            <button text="Next" class="sell-btn btn"></button>    
+        </StackLayout>   
+</StackLayout>

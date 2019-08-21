@@ -32,14 +32,14 @@ export class HomeComponent implements OnInit {
                 let url = "https://reverse.geocoder.api.here.com/6.2/reversegeocode.json?prox="+location.latitude+"%2C"+location.longitude+"%2C250&mode=retrieveAddresses&maxresults=1&gen=9&app_id=tYzeEs9TXuZGJeD1l223&app_code=RuPFmCOTA0PNzsPsl2WlkQ";
                 console.log(url);
                 this.http.get(url)
-                    .subscribe((results) => {
-                        alert(JSON.stringify(results));
-                            alert("address1 " + JSON.stringify(results.Response.View[0].Result[0].Location.Address.Label));
-                            // if (results.Response.View[0].Result[0].Location.Address.Label) {
-                            //     this.currentloc = results.Response.View[0].Result[0].Location.Address.Label;
-                            // } else {
-                            //     //this.currentloc = results.error_message;
-                            // }
+                    .subscribe((results: any) => {
+                        //alert(JSON.stringify(results));
+                            //alert("address1 " + JSON.stringify(results.Response.View[0].Result[0].Location.Address.Label));
+                            if (results.Response.View[0].Result[0].Location.Address.Label) {
+                                this.currentloc = results.Response.View[0].Result[0].Location.Address.Label;
+                            } else {
+                                //this.currentloc = results.error_message;
+                            }
                     }, 
                     (error) => {
                         console.log("ERROR: ", error);
