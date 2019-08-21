@@ -2,7 +2,7 @@ import { Component, OnInit, ViewContainerRef } from "@angular/core";
 import { ModalDialogService, ModalDialogOptions } from "nativescript-angular/directives/dialogs";
 import { LoginComponent } from "../login/login.component";
 import { Page } from "tns-core-modules/ui/page/page";
-
+import { tnsOAuthLogin } from "../shared/auth.service";
 @Component({
     selector: "Myaccount",
     moduleId: module.id,
@@ -12,7 +12,7 @@ import { Page } from "tns-core-modules/ui/page/page";
 export class MyaccountComponent implements OnInit {
 
     constructor(private modalService: ModalDialogService, private viewContainerRef: ViewContainerRef,
-        private page: Page) {
+                private page: Page) {
         // Use the constructor to inject services.
     }
 
@@ -27,6 +27,13 @@ export class MyaccountComponent implements OnInit {
             viewContainerRef: this.viewContainerRef
         };
         this.modalService.showModal(LoginComponent, options);
+    }
+
+    fblogin() {
+        tnsOAuthLogin('facebook');
+    }
+    gologin() {
+        tnsOAuthLogin('google');
     }
 
 }

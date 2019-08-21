@@ -2,8 +2,8 @@
     <Label class="action-bar-title" text="What are you offering"></Label>
 </ActionBar>
 <WrapLayout orientation="horizontal" horizontalAlignment="center" class="list-items">
-    <StackLayout class="categories" *ngFor="let item of category">
-        <label text="&#x{{ item.category_icon }}" class="item-bg fas" (tap)="getsubcategory(item.id)"></label>  
+    <StackLayout class="categories" *ngFor="let item of category">  
+        <label text="&#xf085;" class="item-bg fas" (tap)="donav()"></label>
         <label text="{{item.category_name}}" class=""></label>
     </StackLayout>
 </WrapLayout>

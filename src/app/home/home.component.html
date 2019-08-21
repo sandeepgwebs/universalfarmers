@@ -1,97 +1,32 @@
-<ActionBar class="pageaction-bar">  
-<StackLayout class="input-field"> 
-<DockLayout class="footer">
-    <Label class="fas footer-act" dock="right" text="&#xf0f3;"></Label>
-    <Label class="footer-act fas" dock="left" text="&#xf3c5;  chandigarh"></Label>
-</DockLayout>
-<textField required class="input-email fas" hint="&#xf002;  Find Any Products" keyboardType="email" style.placeholderColor="#fff"></textField>
-</StackLayout>
+<ActionBar class="pageaction-bar"> 
+    <ActionItem ios.position="left" android.position="popup">
+    <label text="&#xf3c5;  chandigarh" class="icon fas"></label>
+    </ActionItem> 
+    <ActionItem class="icon fas" ios.position="right">  
+    <label text="&#xf0f3;" class="icon fas"></label>
+    </ActionItem>  
 </ActionBar>
-<ScrollView> 
+ <ScrollView> 
     <StackLayout class="gray">
-        <label text="fresh recommendations" class="item-head"></label>
+    <StackLayout>
+        <SearchBar class="searchbr" hint="Find any item " color="white" textFieldHintColor="#999"></SearchBar>
+    </StackLayout>
+    <label text="fresh recommendations" class="item-head"></label>
+                <!---StackLayout class="input-field" orientation="vertical"> 
+                    <DockLayout class="footer"> 
+                    <Label class="fas footer-act" dock="right" text="&#xf0f3;"></Label>
+                    <Label class="footer-act fas" dock="left" text="&#xf3c5;  chandigarhs df"></Label>
+                    </DockLayout>
+                    <textField required class="input-email fas" hint="&#xf002;  Find Any Products" keyboardType="email" style.placeholderColor="#fff"></textField>
+                </StackLayout-->
 		<WrapLayout orientation="horizontal" horizontalAlignment="center" class="list-item">  
-            <StackLayout class="colm-list"> 
+            <StackLayout class="colm-list" *ngFor="let item of ads"> 
                 <Image class="list-images" src="~/app/images/arjantractor.jpg"></Image>
-                <label text="&#xf156; 75,0000" class="item-price fas"></label>
-                <label text="Mahindra Arjun Novo" class="item-name" textWrap="true"></label>
-                <label text="2017 - 78000km" class="item-name"></label>
-                <label text="&#xf3c5;  punjab" class="item-locat fas"textWrap="true"></label>
-            </StackLayout>
-            <StackLayout class="colm-list"> 
-                <Image class="list-images" src="~/app/images/harrow.jpg"></Image>
-                <label text="&#xf156; 50,000" class="item-price fas"></label>
-                <label text="harrow" class="item-name" textWrap="true"></label>
-                <label text="" class="item-name"></label>
-                <label text="&#xf3c5;  chandigarh" class="item-locat fas" textWrap="true"></label>
-            </StackLayout>
-            <StackLayout class="colm-list"> 
-                <Image class="list-images" src="~/app/images/trolley.jpg"></Image>
-                <label text="&#xf156; 12,5000" class="item-price fas"></label>
-                <label text="Agriculture Land Leveler" class="item-name" textWrap="true"></label>
-                <label text="" class="item-name"></label>
-                <label text="&#xf3c5; zirakpur" class="item-locat fas" textWrap="true"></label>
-            </StackLayout>
-            <StackLayout class="colm-list"> 
-                <Image class="list-images" src="~/app/images/rotavator-machine.jpg"></Image>
-                <label text="&#xf156; 280000" class="item-price fas"></label>
-                <label text="rutavater" class="item-name" textWrap="true"></label>
-                <label text="" class="item-name"></label>
-                <label text="&#xf3c5; zirakpur" class="item-locat fas" textWrap="true"></label>
-            </StackLayout>
-            <StackLayout class="colm-list"> 
-                <Image class="list-images" src="~/app/images/download.jpg"></Image>
-                <label text="&#xf156; 7,75000" class="item-price fas"></label>
-                <label text="farmer cambain machai" class="item-name" textWrap="true"></label>
-                <label text="" class="item-name"></label>
-                <label text="&#xf3c5; zirakpur" class="item-locat fas" textWrap="true"></label>
-            </StackLayout>
-            <StackLayout class="colm-list"> 
-                <Image class="list-images" src="~/app/images/cul-b.png"></Image>
-                <label text="&#xf156; 15000" class="item-price fas"></label>
-                <label text="Cultivator" class="item-name"></label>
-                <label text="" class="item-name"></label>
-                <label text="&#xf3c5; zirakpur" class="item-locat fas"></label>
-            </StackLayout>
-            <StackLayout class="colm-list"> 
-                <Image class="list-images" src="~/app/images/mahindra.jpg"></Image>
-                <label text="&#xf156; 280000" class="item-price fas"></label>
-                <label text="Mahindra Straw Reaper" class="item-name"></label>
-                <label text="" class="item-name"></label>
-                <label text="&#xf3c5; Ludhiana " class="item-locat fas"></label>
-            </StackLayout>
-            <StackLayout class="colm-list"> 
-                <Image class="list-images" src="~/app/images/dasmesh.jpg"></Image>
-                <label text="&#xf156; 165000" class="item-price fas"></label>
-                <label text="laser land leverl" class="item-name"></label>
-                <label text="" class="item-name"></label>
-                <label text="&#xf3c5; zirakpur" class="item-locat fas"></label>
-            </StackLayout>
-            <StackLayout class="colm-list"> 
-                <Image class="list-images" src="~/app/images/agriculture.jpg"></Image>
-                <label text="&#xf156; 75000" class="item-price fas"></label>
-                <label text="Agriculture Land Leveler" class="item-name"></label>
-                <label text="" class="item-name"></label>
-                <label text="&#xf3c5; zirakpur" class="item-locat fas"></label>
-            </StackLayout>
-            <StackLayout class="colm-list"> 
-                <Image class="list-images" src="~/app/images/download.jpg"></Image>
-                <label text="&#xf156; 7,75000" class="item-price fas"></label>
-                <label text="farmer cambain machai" class="item-name"></label>
-                <label text="" class="item-name"></label>
-                <label text="&#xf3c5; zirakpur" class="item-locat fas"></label>
-            </StackLayout>
-            <StackLayout class="colm-list"> 
-                <Image class="list-images" src="~/app/images/rotavator-machine.jpg"></Image>
-                <label text="&#xf156; 280000" class="item-price fas"></label>
-                <label text="rutavater" class="item-name"></label>
-                <label text="" class="item-name"></label>
-                <label text="&#xf3c5; zirakpur" class="item-locat fas"></label>
-            </StackLayout>
-            <StackLayout class="colm-list"> 
-                <Image class="list-images" src="~/app/images/Sed-41-512.png"></Image>
-                <label text="Rs: 15000"></label>
-            </StackLayout>
+                <label text="&#xf156; {{item.price}}" class="item-price fas"></label>
+                <label text="{{item.adtitle}}" class="item-name"></label>
+                <label text="2017 - 78000km" class="item-km" ></label> 
+                <Label class="item-locat fas" text="&#xf3c5;  {{item.location}}"></Label>
+            </StackLayout> 
         </WrapLayout>
         <!--GridLayout orientation="horizontal" horizontalAlignment="center" columns="auto, auto" rows="*,*,*">
             <StackLayout  row="0" col="0" backgroundColor="red"> 

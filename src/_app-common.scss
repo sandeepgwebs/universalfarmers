@@ -215,4 +215,283 @@
 .categories label{
     text-transform: capitalize;
 }
+ // Place any CSS rules you want to apply on both iOS and Android here.
+// This is where the vast majority of your CSS code goes.
+// Font icon class
+.fa {
+    font-family: "FontAwesome";
+ }
+ .far {
+     font-family: Font Awesome 5 Free, fa-regular-400;
+     font-weight: 400; 
+ }
+ .fab {
+     font-family: Font Awesome 5 Brands, fa-brands-400;
+     font-weight: 400; 
+ }
+ .fas {
+     font-family: Font Awesome 5 Free, fa-solid-900;
+     font-weight: 900; 
+ }
+ // Common page class
  
+ .page-content {
+     .page-placeholder {
+         //color: $page-icon-color;
+         font-size: $page-content-placeholder-font-size;
+         vertical-align: center;
+         //horizontal-align: center;
+     }
+ 
+     .page-icon {
+         font-size: 72;
+         vertical-align: top;
+         //horizontal-align: center;
+         //color: $page-icon-color;
+         margin-top: 20%;
+     }
+ }
+ 
+ //Action bar
+  .btn-primary{
+     background-color: #4CA50D;
+     color:#fff;
+     padding:20;
+     font-size:18; 
+     margin:10;
+  }
+ .page{
+     background-color: #4CA50D;
+     color:#fff;
+ }
+ .page-content{
+     margin:28;
+     margin-bottom:0; 
+ }
+ .page TabView {
+     tab-text-color: #fff;
+     tab-background-color: #4CA50D;
+     selected-tab-text-color: white;
+     android-selected-tab-highlight-color: orange;
+     tab-border-width:8;
+ }
+ .page-content .images{
+     margin-top:65;
+     width:300;
+ }
+ .form .input-email{
+     border-width :0 0 1 0;
+     //padding:8 0;
+     font-size:17;
+     margin: 0;
+     border-color: #fff;
+     color:#fff;
+     margin:0;
+ }
+ .sign-btn{
+     border-radius: 50%;
+     border-width:1;
+     background:#FDB60C;
+     border-color:#fff;
+     font-weight:bold;
+     font-size:17;
+     padding:0;
+     height:40;
+     margin: 25 0 20;
+ }
+ .notesys{
+     text-align:center;
+     font-size: 18;
+ }
+ .notesy{
+     transform: translateY(0);
+     text-align:center;
+ }
+ .images{
+     margin:40 0;
+ }
+ .login-page .login-text{
+     margin:0 15; 
+     color:#999;
+     border-width: 0 0 1 0;
+     padding:10 0;
+     border-color:#ccc;
+ }
+ .login-page .login-head{
+     font-size:19;
+     font-weight:900;
+     color:#000;
+ }
+ .login-page .img-rounded{
+     height:40;
+     width:40;
+     margin-right:8;
+ }
+ .login-page .user-img{
+     border-width:2;
+     border-radius: 50%;
+     height:92;
+     width:90;
+     margin-right:15;
+     border-color:#ccc;
+ }
+ .login-page .user-profile{
+     margin:70 0 40;  
+ }
+ .login-page .user-name{
+     margin-top:6;
+ }
+ .list-images{
+     width:150;
+     height:120;
+     margin-bottom:5;
+     border-radius: 5;
+ }
+ .gray{
+     color:#ccc;
+     //margin:20 0;
+ }
+ .colm-list{
+     border-width:1;
+     border-color:#ccc;
+     margin:5; 
+     padding:5;
+     border-radius: 5;
+     text-transform: capitalize;
+ }
+ .sell{
+     color:#4CA50D;
+ }
+ .pageaction-bar{
+     background-color:#4CA50D;
+     margin-left:-12;
+     padding-bottom:8;
+     color:#fff;
+ }
+ .pageaction-bar .footer{   
+     margin:10 0 0 0;
+     padding-right:13;
+     padding-left:7;
+     font-size:16;
+     width:100%;
+     font-weight:100;
+ }
+ .pageaction-bar .input-email{
+     border-width:2;
+     border-color:#fff;
+     margin:10 9 5 5;
+     font-size:15;
+     border-radius: 2;
+     //margin-right:10;
+     padding:9;
+ }
+ .item-head{
+     margin:15 15;
+     font-size:18;
+     color:#000;
+     font-weight:bold;
+     text-transform: capitalize;
+ }
+ .colm-list label{
+     margin:2 0; 
+     text-transform: capitalize;
+ }
+ .colm-list .item-price{
+     font-weight:100;
+     color:#000;
+     font-size:14;
+ }
+ .colm-list .item-name{
+     color:#000;
+     white-space: nowrap;
+     overflow: hidden;
+     text-overflow: ellipsis;
+     width: 250px; 
+     transform: translateX(-13)
+ }
+ .colm-list .item-locat{
+     color:#4CA50D;
+     font-weight:bold;
+     text-transform: capitalize;
+ }
+ .list-items{
+     margin:10 0;
+ }
+ .item-bg{
+     background-color:#4CA50D;
+     color:#fff;
+     padding:15;
+     height:50;
+     width:50;
+     border-radius: 50; 
+ }
+ .categories{
+     width:150;
+     padding:25;
+     border-width:0 1 1 0;
+     border-color:#ccc;
+     text-align: center;
+     font-weight: bold;
+     font-size:16;
+     text-transform: capitalize;
+ }
+ .categories label{
+     text-transform: capitalize;
+ }
+ .login-page .social{
+     margin:16 8;
+     color:#fff;
+     padding:12;  
+     height:50;
+     width:50;
+     border-radius:50;
+     text-align: center;
+     font-size: 22;
+ }
+ .login-page .fb{
+     background-color:#3B5998;
+ }
+ .login-page .go{
+     background-color:#bd3126;
+ }
+ /*sell page*/
+ .sell-page{
+     background-color: #fff;  
+ }
+ .label{
+     margin:0 5;
+     color:#999;
+ }
+ .sell-content{
+     margin: 10;
+ }
+ .input-sell{
+     margin:4 0;
+ }
+ .input-sell .input-email{
+     //border-color:#4CA50D;
+     color:#000;
+     font-size:15;
+ }
+ .sell-btn{
+    background-color:#4CA50D;
+    color:#fff;
+    margin:8 0 0;
+    height:50;
+    font-size:17;
+ }
+ .label-cam{
+     background-color:#4CA50D;
+     height:40;
+     width: 40;
+     padding: 10;
+     font-size:22;    
+     color:#fff;
+     margin:10 0 0 8;
+     border-radius: 5;
+ }
+ .img-roundeds {
+     margin:6 5 0 5;
+     border-width:1;
+     border-color:#ccc;
+ }

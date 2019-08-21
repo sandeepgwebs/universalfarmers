@@ -3,6 +3,7 @@ import { NativeScriptCommonModule } from "nativescript-angular/common";
 
 import { SellRoutingModule } from "./sell-routing.module";
 import { SellComponent } from "./sell.component";
+import { LoginComponent } from "../login/login.component";
 
 @NgModule({
     imports: [
@@ -10,7 +11,8 @@ import { SellComponent } from "./sell.component";
         SellRoutingModule
     ],
     declarations: [
-        SellComponent
+        SellComponent,
+        LoginComponent
     ],
     schemas: [
         NO_ERRORS_SCHEMA

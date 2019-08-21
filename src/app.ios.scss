@@ -9,3 +9,110 @@
 @import 'app-common';
 
 // Place any CSS rules you want to apply only on iOS here
+// Place any CSS rules you want to apply on both iOS and Android here.
+// This is where the vast majority of your CSS code goes.
+// Font icon class
+.fa {
+    font-family: "FontAwesome";
+ }
+ .far {
+     font-family: Font Awesome 5 Free, fa-regular-400;
+     font-weight: 400; 
+ }
+ .fab {
+     font-family: Font Awesome 5 Brands, fa-brands-400;
+     font-weight: 400; 
+ }
+ .fas {
+     font-family: Font Awesome 5 Free, fa-solid-900;
+     font-weight: 900; 
+ }
+ // Common page class
+ 
+ .page-content {
+     .page-placeholder {
+         //color: $page-icon-color;
+         font-size: $page-content-placeholder-font-size;
+         vertical-align: center;
+         //horizontal-align: center;
+     }
+ 
+     .page-icon {
+         font-size: 72;
+         vertical-align: top;
+         //horizontal-align: center;
+         //color: $page-icon-color;
+         margin-top: 20%;
+     }
+ }
+ 
+ //Action bar
+
+ .pageaction-bar{
+    background-color:#4CA50D;
+    color:#fff;
+    //margin:0 0 0 20;
+    height:100;
+    padding:20;
+    z-index:12;
+ }
+ .pageaction-bar .input-field{
+    width:100%;
+    //height:100;
+    //padding-top:40;
+    //padding-bottom:0;
+    //background: red;
+    margin-left:-22;
+ }
+ .input-set{
+    background: #4CA50D;
+    margin-bottom:10;
+ }
+ .pageaction-bar .footer{
+    margin:10;
+ }
+ .pageaction-bar .input-email{
+     border-width:2;
+     border-color:#fff;
+     //margin:20 0;
+     font-size:15;
+     border-radius: 3;
+     //margin-right:10;
+     padding:11;
+     width: 100%;
+    }
+    .colm-list .item-name{
+        color:#000;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 250px; 
+        transform: translateX(-13)
+    }
+    .colm-list .item-km{
+        color:#000;
+    }
+    .colm-list .item-km{
+        color:#000;
+    }
+    .colm-list label{
+        margin:3 0; 
+        text-transform: capitalize;
+        font-size:14;
+    }
+    .categories .sell-item{
+        font-size:15;
+        margin:10 0;
+    }
+    .list-images{
+        width:160;
+        height:120;
+        margin-bottom:5;
+        border-radius: 5;
+    }
+    .searchbr{
+        background-color:#4CA50D;
+        border-width:1;
+        border-radius: 0;
+        font-size:14;
+    }

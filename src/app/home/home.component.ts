@@ -15,10 +15,16 @@ import { HttpClient } from "@angular/common/http";
 export class HomeComponent implements OnInit {
     items: Array<IDataItem>;
     currentloc: any = "chandigarh";
-    constructor(private _itemService: DataService,private routerExtensions: RouterExtensions, private http: HttpClient) { }
+    ads: object;
+    constructor(private dataservice: DataService,private routerExtensions: RouterExtensions, private http: HttpClient) { }
 
     ngOnInit(): void {
-        this.items = this._itemService.getItems();
+        this.dataservice.getads().subscribe((data: any) => {
+           this.ads = data.data;
+        },
+        (error) => {
+            console.log(error);
+        });
     }
     currentlocation() {
         enableLocationRequest(true);
@@ -27,20 +33,18 @@ export class HomeComponent implements OnInit {
             timeout: 5000
          })
             .then((location) => {
-                console.log("Location received: " + JSON.stringify(location));
-                // let url = "https://maps.googleapis.com/maps/api/geocode/json?latlng=" + location.latitude + "," + location.longitude + "&sensor=true&key=AIzaSyBLNhcYJp1lQppXEZpb-KOn1iYV6ucj--0";
                 let url = "https://reverse.geocoder.api.here.com/6.2/reversegeocode.json?prox="+location.latitude+"%2C"+location.longitude+"%2C250&mode=retrieveAddresses&maxresults=1&gen=9&app_id=tYzeEs9TXuZGJeD1l223&app_code=RuPFmCOTA0PNzsPsl2WlkQ";
                 console.log(url);
                 this.http.get(url)
                     .subscribe((results) => {
                         alert(JSON.stringify(results));
-                            alert("address1 " + JSON.stringify(results.Response.View[0].Result[0].Location.Address.Label));
+                            // alert("address1 " + results.Response.View[0].Result[0].Location.Address.Label);
                             // if (results.Response.View[0].Result[0].Location.Address.Label) {
                             //     this.currentloc = results.Response.View[0].Result[0].Location.Address.Label;
                             // } else {
                             //     //this.currentloc = results.error_message;
                             // }
-                    }, 
+                    },
                     (error) => {
                         console.log("ERROR: ", error);
                     });

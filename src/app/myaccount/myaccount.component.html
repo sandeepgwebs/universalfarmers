@@ -18,12 +18,17 @@
                     <label text="Help center and legal terms" class="login-detail"></label>  
                 </StackLayout>
                 <StackLayout row="0" col="2" >
-                    <label text="" class="login-head"></label> 
-                </StackLayout>
+                    <label text="" class="login-head"></label>  
+                </StackLayout> 
             </GridLayout>
         </StackLayout>            
         <StackLayout class="form">    
             <Button text="login or register" (tap)="showModal()" class="btn btn-primary Reg-btn"></Button>
-        </StackLayout>             
-    </StackLayout>  
+        </StackLayout>
+        <label text="-- OR --"  class="text-center" color="#000" ></label>   
+        <DockLayout orientation="horizontal" horizontalAlignment="center">
+            <Label class="social fab fb" text="&#xf39e;" (tap)="fblogin()"></Label>
+            <Label class="fab social go" text="&#xf1a0;" (tap)="gologin()"></Label>                              
+        </DockLayout>          
+    </StackLayout>
 </page>

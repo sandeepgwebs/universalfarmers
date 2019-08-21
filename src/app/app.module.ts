@@ -8,6 +8,7 @@ import { NativeScriptFormsModule } from "nativescript-angular/forms";
 import { HttpClientModule } from "@angular/common/http";
 import { FormBuilder, Validators } from "@angular/forms";
 import { LoginComponent } from "./login/login.component";
+import { SellModule } from "./sell/sell.module";
 @NgModule({
     bootstrap: [
         AppComponent
@@ -17,14 +18,14 @@ import { LoginComponent } from "./login/login.component";
         AppRoutingModule,
         NativeScriptRouterModule,
         NativeScriptFormsModule,
-        HttpClientModule
+        HttpClientModule,
+        SellModule
     ],
     providers: [
         FormBuilder
     ],
     declarations: [
-        AppComponent,
-        LoginComponent
+        AppComponent
     ],
     schemas: [
         NO_ERRORS_SCHEMA
@@ -32,5 +33,5 @@ import { LoginComponent } from "./login/login.component";
     entryComponents: [
         LoginComponent
     ]
-})
+}) 
 export class AppModule { }

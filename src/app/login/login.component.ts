@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { ModalDialogParams } from 'nativescript-angular/directives/dialogs';
-import { RouterExtensions } from 'nativescript-angular/router';
-import { ActivatedRoute } from '@angular/router';
-import { Page } from 'tns-core-modules/ui/page/page';
+import { Component, OnInit } from "@angular/core";
+import { ModalDialogParams } from "nativescript-angular/directives/dialogs";
+import { RouterExtensions } from "nativescript-angular/router";
+import { ActivatedRoute } from "@angular/router";
+import { Page } from "tns-core-modules/ui/page/page";
 import { User } from "../models/user";
 import { HttpClient } from "@angular/common/http";
 const Sqlite = require("nativescript-sqlite");
@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit {
 
 	private database: any;
 	constructor(private params: ModalDialogParams, private page: Page,
-		private router: RouterExtensions, private activeRoute: ActivatedRoute, private http: HttpClient) {
+				private router: RouterExtensions, private activeRoute: ActivatedRoute, private http: HttpClient) {
 		this.user = new User();
 		this.user.email = "";
 		this.user.password = "";
@@ -36,24 +36,24 @@ export class LoginComponent implements OnInit {
 					this.database = db;
 					var fetchresult = this.fetch();
 					console.log("res", fetchresult);
-				// 	 if(fetchresult.length==0) {
-				// 	this.database.execSQL("INSERT INTO user (email, username, token) VALUES (?, ?, ?)", [data.email, "", ""]).then(id => {
-				// 		console.log("INSERT RESULT", id);
-				// 		this.fetch();
-				// 	}, (error) => {
-				// 		console.log("INSERT ERROR", error);
-				// 	});
-				// } else {
+					// 	 if(fetchresult.length==0) {
+					// 	this.database.execSQL("INSERT INTO user (email, username, token) VALUES (?, ?, ?)", [data.email, "", ""]).then(id => {
+					// 		console.log("INSERT RESULT", id);
+					// 		this.fetch();
+					// 	}, (error) => {
+					// 		console.log("INSERT ERROR", error);
+					// 	});
+					// } else {
 
-				// }
+					// }
 				},
-				(error) => {
-					console.log("CREATE TABLE ERROR", error);
-				});
+					(error) => {
+						console.log("CREATE TABLE ERROR", error);
+					});
 			},
-			(error) => {
-				console.log("OPEN DB ERROR", error);
-			});
+				(error) => {
+					console.log("OPEN DB ERROR", error);
+				});
 			this.isBusy = false;
 			this.close();
 		},
@@ -65,18 +65,18 @@ export class LoginComponent implements OnInit {
 	}
 	fetch() {
 		this.database.all("SELECT * FROM user").then((rows) => {
-            this.people = [];
-            for(var row in rows) {
-                this.people == rows
-				console.log("users ",rows);
-				
+			this.people = [];
+			for (var row in rows) {
+				this.people == rows
+				console.log("users ", rows);
+
 			}
 			return rows;
-			
+
 		},
-		(error) => {
-            console.log("SELECT ERROR", error);
-        });
+			(error) => {
+				console.log("SELECT ERROR", error);
+			});
 	}
 	async signup() {
 		if (this.user.password == this.user.cpassword) {

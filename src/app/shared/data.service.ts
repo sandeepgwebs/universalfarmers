@@ -1,4 +1,5 @@
 import { Injectable } from "@angular/core";
+import { HttpClient } from "@angular/common/http";
 
 export interface IDataItem {
     id: number;
@@ -10,7 +11,13 @@ export interface IDataItem {
     providedIn: "root"
 })
 export class DataService {
+    API_URL = "https://mandisuppliers.com/farmers/api/";
+    constructor(private http: HttpClient) {
 
+    }
+    getads() {
+       return this.http.get(this.API_URL + "getads");
+    }
     private items = new Array<IDataItem>(
         {
             id: 1,
