@@ -14,8 +14,6 @@ import * as dialogs from "tns-core-modules/ui/dialogs";
 let context = imagepicker.create({
     mode: "single" // use "multiple" for multiple selection
 });
-import { RouterExtensions } from "nativescript-angular/router";
-import { DataService } from "../shared/data.service";
 @Component({
     selector: "Sell",
     moduleId: module.id,
@@ -32,10 +30,6 @@ export class SellComponent implements OnInit {
      
 
     constructor(private router: Router, private page: Page,private routerExtensions: RouterExtensions) {
-    isBusy: boolean = false;
-    category: any;
-    constructor(private router: Router, private page: Page, private http: HttpClient,
-                private routerExtensions: RouterExtensions, private dataservice: DataService) {
         // Use the component constructor to inject providers.
     }
 
@@ -58,25 +52,11 @@ export class SellComponent implements OnInit {
             console.log("Size: " + imageAsset.options.width + "x" + imageAsset.options.height);
             }).catch(err => {
             console.log(err.message);
-        this.isBusy = true;
-        this.http.get(this.dataservice.API_URL + "getcategories").subscribe((data: any) => {
-            this.category = data.data;
         });
     }
     onCheckForCamera() {
         let isCameraAvailable = isAvailable();
         console.log("Is camera hardware available: " + isCameraAvailable);
-    getsubcategory(id) {
-        alert(id);
-    }
-    donav(){
-        // alert('asdf');
-        this.routerExtensions.navigate(['/login'], { clearHistory: true }).then((success) =>{
-            console.log('success');
-        },
-        (err) => {
-            console.log('error');
-        });
     }
 
     uploads(){      

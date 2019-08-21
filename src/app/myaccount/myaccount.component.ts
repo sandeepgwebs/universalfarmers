@@ -30,10 +30,10 @@ export class MyaccountComponent implements OnInit {
     }
 
     fblogin() {
-        tnsOAuthLogin('facebook');
+        tnsOAuthLogin("facebook");
     }
     gologin() {
-        tnsOAuthLogin('google');
+        tnsOAuthLogin("google");
     }
 
 }

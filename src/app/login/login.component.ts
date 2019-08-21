@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit {
 
 	private database: any;
 	constructor(private params: ModalDialogParams, private page: Page,
-				private router: RouterExtensions, private activeRoute: ActivatedRoute, private http: HttpClient) {
+		private router: RouterExtensions, private activeRoute: ActivatedRoute, private http: HttpClient) {
 		this.user = new User();
 		this.user.email = "";
 		this.user.password = "";
@@ -36,16 +36,16 @@ export class LoginComponent implements OnInit {
 					this.database = db;
 					var fetchresult = this.fetch();
 					console.log("res", fetchresult);
-					// 	 if(fetchresult.length==0) {
-					// 	this.database.execSQL("INSERT INTO user (email, username, token) VALUES (?, ?, ?)", [data.email, "", ""]).then(id => {
-					// 		console.log("INSERT RESULT", id);
-					// 		this.fetch();
-					// 	}, (error) => {
-					// 		console.log("INSERT ERROR", error);
-					// 	});
-					// } else {
+					if (fetchresult.length == 0) {
+						this.database.execSQL("INSERT INTO user (email, username, token) VALUES (?, ?, ?)", [data.email, "", ""]).then(id => {
+							console.log("INSERT RESULT", id);
+							this.fetch();
+						}, (error) => {
+							console.log("INSERT ERROR", error);
+						});
+					} else {
 
-					// }
+					}
 				},
 					(error) => {
 						console.log("CREATE TABLE ERROR", error);

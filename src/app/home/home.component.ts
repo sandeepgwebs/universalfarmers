@@ -36,7 +36,7 @@ export class HomeComponent implements OnInit {
                 console.log("Location received: " + JSON.stringify(location));
                 // let url = "https://maps.googleapis.com/maps/api/geocode/json?latlng=" + location.latitude + "," + location.longitude + "&sensor=true&key=AIzaSyBLNhcYJp1lQppXEZpb-KOn1iYV6ucj--0";
                 let url = "https://reverse.geocoder.api.here.com/6.2/reversegeocode.json?prox="+location.latitude+"%2C"+location.longitude+"%2C250&mode=retrieveAddresses&maxresults=1&gen=9&app_id=tYzeEs9TXuZGJeD1l223&app_code=RuPFmCOTA0PNzsPsl2WlkQ";
-                console.log(url);
+                
                 this.http.get(url)
                     .subscribe((results: any) => {
                         //alert(JSON.stringify(results));
@@ -52,7 +52,7 @@ export class HomeComponent implements OnInit {
                     });
             }).catch((error) => {
                 console.log("Location error received: " + error);
-                alert("Location error received: " + error);
+               
             });
     }
     login(){
