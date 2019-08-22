@@ -1,6 +1,11 @@
 // Place any CSS rules you want to apply on both iOS and Android here.
 // This is where the vast majority of your CSS code goes.
 // Font icon class
+*{
+    //font-family: "Raleway-Bold";
+    font-family: 'Montserrat-Regular';
+    letter-spacing: 0px;
+}
 .fa {
     font-family: "FontAwesome";
  }
@@ -183,6 +188,7 @@
      font-weight:100;
      color:#000;
      font-size:14;
+     
  }
  .colm-list .item-name{
      color:#000;
@@ -190,7 +196,7 @@
      overflow: hidden;
      text-overflow: ellipsis;
      width: 250px; 
-     transform: translateX(-13)
+     transform: translateX(-13);
  }
  .colm-list .item-locat{
      color:#4CA50D;
